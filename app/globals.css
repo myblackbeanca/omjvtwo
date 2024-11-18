@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 209 31% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 209 31% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 209 31% 16%;
+    --primary: 334 98% 72%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 48 97% 77%;
+    --secondary-foreground: 209 31% 16%;
+    --muted: 204 3% 79%;
+    --muted-foreground: 209 31% 16%;
+    --accent: 48 97% 77%;
+    --accent-foreground: 209 31% 16%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 334 98% 72%;
+    --input: 204 3% 79%;
+    --ring: 334 98% 72%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  h1, h2, h3, .heading {
+    @apply font-sigmar;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FD75B4] to-[#FDE48C];
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-md bg-white/90 dark:bg-black/90 shadow-xl;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
