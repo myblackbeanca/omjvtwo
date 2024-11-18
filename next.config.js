@@ -13,6 +13,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    appDir: true, // Enable the experimental `app` directory feature
+  },
 };
 
 module.exports = nextConfig;
